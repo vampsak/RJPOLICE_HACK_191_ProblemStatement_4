@@ -44,7 +44,4 @@ Make sure you have the following Python libraries installed:
 - `matplotlib`
 - `PIL` (Pillow)
 
-Install any missing libraries using:
-
-```bash
-pip install library_name
+Please note that the project is still in progress and incomplete. It will become even better after completion.
