@@ -2,6 +2,7 @@
 
 This project utilizes OCR (Optical Character Recognition) and other technologies to analyze Sample First Information Reports (FIRs) and extract crucial information. The goal is to provide insights into crime types, details, and related legal sections.
 ## Project Overview 📑
+**Note**: Project is Still Under Development , Some components already there and some are under development process
 The project involves the following key components:
 
 1. **OCR and Text Extraction**: Utilizes the EasyOCR library for OCR to extract text and bounding boxes from images of FIRs.
