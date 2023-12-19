@@ -1,9 +1,7 @@
 # FIR Analysis Project 🕵️‍♂️📋
 
 This project utilizes OCR (Optical Character Recognition) and other technologies to analyze Sample First Information Reports (FIRs) and extract crucial information. The goal is to provide insights into crime types, details, and related legal sections.
-
 ## Project Overview 📑
-
 The project involves the following key components:
 
 1. **OCR and Text Extraction**: Utilizes the EasyOCR library for OCR to extract text and bounding boxes from images of FIRs.
@@ -43,5 +41,14 @@ Make sure you have the following Python libraries installed:
 - `pdf2image`
 - `matplotlib`
 - `PIL` (Pillow)
-
+## Web Interface
+The main page (index.html) allows users to upload an image of an FIR for analysis.
+The result page (result.html) displays crime details and relevant laws extracted from the analysis.
+## Screenshot ( Demo Website Overview)
+![Screenshot from 2023-12-19 11-04-23](https://github.com/Om334exe/RJPOLICE_HACK_191_ProblemStatement_4/assets/134759580/b22fa463-eb4e-4b93-9403-488a0d76248d)
 Please note that the project is still in progress and incomplete. It will become even better after completion.
+
+## Team Information
+This web application is developed by Team Adhunikta, consisting of Om Dabral and Saksham Srivastava.
+
+Feel free to explore the web application and contribute to its further development!
