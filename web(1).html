@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Law Finder</title>
+    <style>
+   
+ 
+        body {
+        
+        
+           font-family: 'Arial', sans-serif;
+        background-image: url('https://tse3.mm.bing.net/th?id=OIP.L2MaDs3JnHlrakaEsUcx7QHaEK&pid=Api&P=0&h=180'); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        text-align: center;
+        margin: 20px;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(to right, #ff0000, #0000ff);
+        text-align: center;
+        margin: 20px;
+        
+        }
+
+        h1 {
+            color: #001f3f; /* Dark Blue */
+            text-decoration: underline;
+            transition: color 0.5s ease-in-out;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button, #logoButton {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        #result {
+            font-family: 'Arial', sans-serif;
+            background-color:white;
+            text-align: left;
+            margin: 20px;
+        }
+
+        #result h1 {
+            color: #001f3f; /* Dark Blue */
+            text-decoration: underline;
+            transition: color 0.5s ease-in-out;
+        }
+
+        #result p {
+            color: #555;
+        }
+
+        #result ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #result li {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        #result p.no-laws {
+            color: #777;
+        }
+
+        #logo {
+            width: 100px; /* Adjust according to your needs */
+            height: 100px; /* Adjust according to your needs */
+            position: right;
+            top: 110px;
+            left: 100px;
+        }
+        #googleCollabOutput {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+             
+    
+        }
+        
+    h1 {
+        color: #001f3f; /* Dark Blue */
+        text-decoration: underline;
+        transition: color 0.5s ease-in-out;
+        border: 2px white; /* Add this line for a black border */
+    }
+
+    form {
+        margin-top: 20px;
+        border: 2px solid white; /* Add this line for a black border */
+        padding: 10px; /* Add padding for better appearance */
+    }
+
+    #result {
+        font-family: 'Arial', sans-serif;
+        background-color: white;
+        text-align: left;
+        margin: 20px;
+        border: 2px solid white; /* Add this line for a black border */
+        padding: 10px; /* Add padding for better appearance */
+        
+    }
+    .logo-container {
+            position: relative;
+            width: 200px; /* Set the desired width of the logo */
+            height: 200px; /* Set the desired height of the logo */
+        }
+
+        .logo {
+            width: 40%;
+            height: 40%;
+            filter: blur(2px); /* Adjust the blur amount as needed */
+        }
+       
+
+
+
+   
+      
+
+         
+    </style>
+</head>
+<body>
+ 
+       
+   
+
+    <img id="logo"
+   
+     
+   src="data:image/jpeg;base64,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" alt="Logo">
+ 
+
+    <h1>Crime Law Finder</h1>
+    <p>RAJASTHAN POLICE</p>
+    <form action="/result" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Submit</button>
+    </form>
+    
+
+    <!-- Result section -->
+    <div id="result">
+        <h1>Result</h1>
+        <p>Crime Details: {{ crime_details }}</p>
+        {% if relevant_laws %}
+            <h2>Relevant Laws:</h2>
+            <ul>
+                {% for law in relevant_laws %}
+                    <li>{{ law }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="no-laws">No relevant laws found.</p>
+        {% endif %}
+    </div>
+
+    <!-- Add a button with an ID for styling -->
+    <button id="logoButton">Click me</button>
+     
+    </div>
+      <div id="https://colab.research.google.com/drive/1aT3J4NKyWSQ7L1ObF3JdtshfS3EJgKkF?usp=sharing">
+        <!-- Output from Google Collab Notebook goes here -->
+    </div>
+       <div id="teamBox">
+        <p> TEAM ADHUNIKTA</p>
+        <p>BY - OM DABRAL AND SAKSHAM SRIVASTAVA</p>\
+        <div class="logo-container">
+        <img src="https://st1.latestly.com/wp-content/uploads/2018/07/rajasthan-police-logo-784x441.jpg" alt="Blurred Logo" class="logo">
+         
+        
+        
+       
+        
+    </div>
+     
+   
+  
+    
+    
+</body>
+</html>
